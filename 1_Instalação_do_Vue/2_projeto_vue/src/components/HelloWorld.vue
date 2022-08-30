@@ -27,6 +27,12 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+  <div class="">
+    <a href="">A</a>
+    <a href="">B</a>
+    <a href="">C</a>
+    <a href="">D</a>
+  </div>
 </template>
 
 <script>
