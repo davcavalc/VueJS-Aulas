@@ -1,9 +1,11 @@
 <script>
 import PrimeiroComponente from "./components/PrimeiroComponente.vue";
 import LifeCycle from "./components/LifeCycle.vue";
+import Info from "./components/Info.vue";
+import Info1 from "./components/Info.vue";
 export default {
  name: "App",
- components: { PrimeiroComponente, LifeCycle },
+ components: { PrimeiroComponente, LifeCycle, Info, Info1 },
  data() {
   return {
    nome: "Fulano de Tal",
@@ -23,5 +25,6 @@ export default {
    trabalho como {{ profissao }}.
   </p>
   <LifeCycle/>
+  <Info1/>
  </div>
 </template>
