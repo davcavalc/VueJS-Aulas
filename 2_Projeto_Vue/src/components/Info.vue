@@ -4,9 +4,20 @@ export default {
  data() {
   return {
    esta_trabalhando: true,
-   mande_email: false,
+   mostrar_email: false,
    email: "fulano12@gmail.com",
+   textoBotao: "Mostrar email",
   };
+ },
+ methods: {
+  showEmail() {
+   this.mostrar_email = !this.mostrar_email;
+   if (!mostrar_email) {
+    this.textoBotao = "Mostrar email";
+   } else {
+    this.textoBotao = "Esconder email";
+   }
+  },
  },
 };
 </script>
@@ -20,6 +31,17 @@ export default {
    <li>PHP</li>
    <li v-if="4 > 2">Python</li>
   </ul>
-  <p v-show="mande_email">Mande um email para: <span class="italic underline text-blue-600">{{ email }}</span></p>
+  <div>
+   <button
+    @click="showEmail"
+    class="border-[1px] rounded-lg w-[15%] border-black my-1 font-semibold"
+   >
+    {{ textoBotao }}
+   </button>
+  </div>
+  <p v-show="mostrar_email">
+   Mande um email para:
+   <span class="italic underline text-blue-600">{{ email }}</span>
+  </p>
  </div>
 </template>
